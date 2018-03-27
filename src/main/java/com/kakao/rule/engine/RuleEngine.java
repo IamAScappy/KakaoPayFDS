@@ -4,11 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.kakao.fds.dao.IUserLogDAO;
-import com.kakao.fds.entity.AccountCreate;
-import com.kakao.fds.entity.MoneyReceive;
-import com.kakao.fds.entity.MoneyTopup;
-import com.kakao.fds.entity.MoneyTransfer;
-import com.kakao.fds.vo.ResultVO;
 import com.kakao.rule.ruleset.RuleA;
 import com.kakao.rule.ruleset.RuleB;
 import com.kakao.rule.ruleset.RuleC;
