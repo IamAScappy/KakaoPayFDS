@@ -17,6 +17,11 @@ import com.kakao.fds.dao.IUserLogDAO;
 import com.kakao.fds.entity.AccountCreate;
 import com.kakao.fds.entity.MoneyTransfer;
 
+/**
+ * DAO 레벨 유닛 테스트
+ * @author prologue
+ *
+ */
 @RunWith(MockitoJUnitRunner.class)
 public class MockDAOTests {
 
@@ -24,17 +29,25 @@ public class MockDAOTests {
 	private IUserLogDAO dao;
 	long userId = 32445666644334443l;
 	
+	/**
+	 * 사용자 계좌 개설 로그용 메소드 테스트
+	 * @throws ParseException
+	 */
 	@Test
 	@SuppressWarnings("deprecation")
 	public void searchAccountLogTest() throws ParseException {
 		when(dao.getAccountCreateLog(userId)).thenReturn(new AccountCreate(userId, "2018-03-01 01:00:00"));
-		//when(dao.getAccountCreateLog(123423123123l)).thenThrow(new RuntimeException());
 		
 		dao.getAccountCreateLog(userId).getRegdate();
 		verify(dao).getAccountCreateLog(userId);
 	}	
 	
+	/**
+	 * 송금 로그용 메소드 테스트
+	 * @throws ParseException
+	 */
 	@Test 
+	@SuppressWarnings("serial")
 	public void searchMoneyTransferLogTest() throws ParseException {
 		when(dao.searchMoneyTransferLog(userId)).thenReturn(
 			new ArrayList<MoneyTransfer>() {

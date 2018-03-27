@@ -7,7 +7,7 @@ import java.util.Date;
 import lombok.Data;
 
 /**
- * 카카오머니 충전 로그
+ * 카카오머니 충전 로그 (은행 계좌에서 머니 충전)
  * @author prologue
  */
 @SuppressWarnings("unused")

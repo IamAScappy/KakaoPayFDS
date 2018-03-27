@@ -19,7 +19,7 @@ public class MoneyTransfer {
 	private String rcvAccount;	// 수신 카카오머니 계좌번호
 	private double preAmount;	// 송금 이체 전 카카오머니 계좌 잔액
 	private double sndAmount;	// 송금 금액 
-	private long rcvUserId;	// 수신 사용자 아이디
+	private long rcvUserId;		// 수신 사용자 아이디
 	
 	public MoneyTransfer() { }
 	

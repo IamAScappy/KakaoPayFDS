@@ -9,6 +9,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.Setter;
 
+/**
+ * 컨트롤러가 리턴할 값을 위한 VO
+ * @author prologue
+ *
+ */
 public class ResultVO {
 	
 	@JsonProperty("user_id")

@@ -15,6 +15,11 @@ import com.kakao.fds.service.IFraudService;
 import com.kakao.fds.vo.ResultVO;
 import com.kakao.rule.engine.RuleEngine;
 
+/**
+ * FDS 탐지를 위한 RESTful API Controller
+ * @author prologue
+ *
+ */
 @RestController
 @RequestMapping(value="/v1")
 public class V1Controller {
@@ -36,7 +41,7 @@ public class V1Controller {
 			resultvo.addRuleItem(s);
 		}
 		
-		// 해당하는 룰이 하나라도 있다면 isFraud의 값을 true로
+		// 해당하는 룰이 하나라도 있다면 fraud의 값을 true로
 		resultvo.setFraud(rules.size() > 0);
 		
 		return resultvo;

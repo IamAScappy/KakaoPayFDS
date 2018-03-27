@@ -24,6 +24,11 @@ import com.kakao.fds.controller.V1Controller;
 import com.kakao.fds.service.FraudService;
 import com.kakao.fds.vo.ResultVO;
 
+/**
+ * Controller 레벨에서의 유닛 테스트
+ * @author prologue
+ *
+ */
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class KakaoFdsApplicationTests {
@@ -43,6 +48,10 @@ public class KakaoFdsApplicationTests {
 		this.mockMVC = MockMvcBuilders.standaloneSetup(this.v1Controller).build();
 	}
 	
+	/**
+	 * RuleB, RuleC의 탐지 대상이 되었을 때에 대한 테스트
+	 * @throws Exception
+	 */
 	@Test
 	public void contextLoads() throws Exception {
 		// FraudService가 RuleB, RuleC를 리턴하도록 STUB 정의
@@ -60,6 +69,10 @@ public class KakaoFdsApplicationTests {
 		System.out.println("ContextLoad1 : Result = "+ mapper.writerWithDefaultPrettyPrinter().writeValueAsString(result));
 	}
 	
+	/**
+	 * 룰 셋 중에서 어느 것에도 탐지되지 않았을 때의 테스트 
+	 * @throws Exception
+	 */
 	@Test
 	public void contextLoads2() throws Exception {
 		

@@ -1,9 +1,6 @@
 package com.kakao.fds;
 
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertEquals;
-import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import java.text.ParseException;
@@ -23,15 +20,18 @@ import com.kakao.fds.entity.MoneyReceive;
 import com.kakao.fds.entity.MoneyTopup;
 import com.kakao.fds.entity.MoneyTransfer;
 import com.kakao.rule.engine.RuleEngine;
-import com.kakao.rule.ruleset.RuleA;
 
+/**
+ * 룰 엔진용 유닛 테스트
+ * @author prologue
+ *
+ */
 @RunWith(MockitoJUnitRunner.class)
 public class RuleEngineTests {
 	long userId = 32445666644334443l;
 	
 	@Mock 
-	private IUserLogDAO dao;
-	
+	private IUserLogDAO dao;	
 	
 	@Test
 	public void testJudge() throws ParseException {
